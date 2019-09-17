@@ -7,54 +7,53 @@ import java.awt.Event.*;
 
 
 /**
- *
  * @author Lucy
  * @date December 2011
  */
-public class BallFrameAr extends JFrame{
+public class BallFrameAr extends JFrame {
 
-public static void main(String[]args){
-  BallFrameAr Win = new BallFrameAr(args);
-  Win.setVisible(true);
-  Win.setDefaultCloseOperation(EXIT_ON_CLOSE);
-} // end main
+    public static void main(String[] args) {
+        BallFrameAr Win = new BallFrameAr(args);
+        Win.setVisible(true);
+        Win.setDefaultCloseOperation(EXIT_ON_CLOSE);
+    } // end main
 
 
-public BallFrameAr(String[] args){
-  super("Moving Balls");
-  setSize(800,650);
-      Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
-          setLocation( (screensize.width - getWidth())/2, 
-                                 (screensize.height - getHeight())/2 );
-      setLayout(new BorderLayout());
-      BallPanel Panel;
-      
-   String[] Temp = new String[150];
-   int Counter = 0;
-     
-       try{
-  // Open the file that is the first 
-  // command line parameter
-  FileInputStream fstream = new FileInputStream("resources/coeur2.txt");
-  // Get the object of DataInputStream
-  DataInputStream in = new DataInputStream(fstream);
-  BufferedReader br = new BufferedReader(new InputStreamReader(in));
-  String strLine;
-  //Read File Line By Line
-  while ((strLine = br.readLine()) != null)   {
-  // Print the content on the console
-  Temp[Counter] = strLine;
-  Counter++;
-  }
-  //Close the input stream
-  in.close();
-    }catch (Exception e){//Catch exception if any
-  System.err.println("Error: " + e.getMessage());
-  }//end try
-  
-  Panel = new BallPanel(Counter, Temp);
-  add(Panel, BorderLayout.CENTER);
-  add(Panel.getButton(), BorderLayout.SOUTH);
+    public BallFrameAr(String[] args) {
+        super("Moving Balls");
+        setSize(800, 650);
+        Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
+        setLocation((screensize.width - getWidth()) / 2,
+                (screensize.height - getHeight()) / 2);
+        setLayout(new BorderLayout());
+        BallPanel Panel;
+
+        String[] Temp = new String[150];
+        int Counter = 0;
+
+        try {
+            // Open the file that is the first
+            // command line parameter
+            FileInputStream fstream = new FileInputStream("resources/coeur2.txt");
+            // Get the object of DataInputStream
+            DataInputStream in = new DataInputStream(fstream);
+            BufferedReader br = new BufferedReader(new InputStreamReader(in));
+            String strLine;
+            //Read File Line By Line
+            while ((strLine = br.readLine()) != null) {
+                // Print the content on the console
+                Temp[Counter] = strLine;
+                Counter++;
+            }
+            //Close the input stream
+            in.close();
+        } catch (Exception e) {//Catch exception if any
+            System.err.println("Error: " + e.getMessage());
+        }//end try
+
+        Panel = new BallPanel(Counter, Temp);
+        add(Panel, BorderLayout.CENTER);
+        add(Panel.getButton(), BorderLayout.SOUTH);
      
      
     /*
@@ -94,6 +93,6 @@ public BallFrameAr(String[] args){
       add(Panel.getButton(), BorderLayout.SOUTH);
      * 
      */
-}// end constructor
+    }// end constructor
 
 } // end BallFrame
