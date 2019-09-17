@@ -34,7 +34,14 @@ public class BallFrameAr extends JFrame {
         try {
             // Open the file that is the first
             // command line parameter
-            FileInputStream fstream = new FileInputStream("resources/coeur2.txt");
+
+            // UPDATE 2016: ensure the loading works inside a jar
+            String filename = args.length > 0 ? args[0] : "coeur2.txt";
+            InputStream fstream = this.getClass().getClassLoader().getResourceAsStream(filename);
+            if(fstream == null){
+                fstream = new FileInputStream(args[0]);
+            }
+
             // Get the object of DataInputStream
             DataInputStream in = new DataInputStream(fstream);
             BufferedReader br = new BufferedReader(new InputStreamReader(in));
