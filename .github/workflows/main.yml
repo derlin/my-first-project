@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build-jar:
+    runs-on: ubuntu-latest
+    steps:
+    # checkout
+    - uses: actions/checkout@v2
+    # build
+    - name: Build the Jar
+      run: ./build-jar.sh
+    # upload
+    - name: Upload a Build Artifact
+      uses: actions/upload-artifact@v2
+      with:
+        path: ./*.jar
