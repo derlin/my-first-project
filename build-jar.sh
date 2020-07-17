@@ -5,6 +5,7 @@ JAR=derlin-FirstProject.jar
 # clean
 rm -rf $OUT_DIR 2>/dev/null
 rm $JAR 2>/dev/null
+mkdir $OUT_DIR
 
 # compile
 javac src/*.java -d $OUT_DIR
