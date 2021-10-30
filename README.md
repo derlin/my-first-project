@@ -12,7 +12,7 @@ When a stumbled upon this old repository, I wanted to keep it safely in git, but
 This is history after all. Hence, my only changes since the actual writing in late 2011 are:
 
 * run *format* on every file in IntelliJ
-* ensure we can easily load ascii art either from jar or from an external file
+* ensure we can easily load ASCII art either from jar or from an external file
 * add a gitignore + a tiny script to automatically create the jar
 
 # Compile and run
@@ -29,7 +29,7 @@ java -jar derlin-FirstProject.jar
 
 **Arguments**
 
-Passing an ascii file as first argument will replace the default heart. There are also readily available other designs.
+Passing an ASCII art file as first argument will replace the default heart. There are also readily available other designs.
 This is the list (use it by passing <name.txt> as first argument):
 
 * `coeur.txt`: a heart
