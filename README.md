@@ -6,6 +6,13 @@ I discovered computer science by taking a random class, "Programming in Java", a
 This was a revelation. I read the "Java 6" book from start to finish, doing all the exercises thoroughly every evening.
 By the end of my lecture, I was ready for a real project. This is it.
 
+<div align="center">
+<b>⭣ Click on the image below to see a video demo (YouTube) ⭣</b>
+<br><br>
+  
+[![Demo on Youtube](https://img.youtube.com/vi/htBkh8ZHb1I/0.jpg)](https://www.youtube.com/watch?v=htBkh8ZHb1I)
+</div>
+
 # Changes
 
 When a stumbled upon this old repository, I wanted to keep it safely in git, but didn't want to change it too much.
